@@ -1,0 +1,110 @@
+html {
+	overflow-y: hidden;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.content{ margin: 0 auto; width: 960px; }
+#header {
+	z-index: 2;
+	width: 100%;
+	background: url('../img/header-bg.png');
+	height: 80px;
+	position: fixed;
+	margin-top: 30px;
+}
+#nav { float: left; margin-top: 20px; }
+#logo{ color: #fff; text-decoration: none; float: left; font-size: 30px; margin-top: 20px; color: #fff; font-family:"Wellfleet"; font-weight: bold; }
+#nav ul{
+	list-style: none;
+	display: block;
+	margin: 0 auto;
+	list-style: none;
+}
+#nav li{
+	margin-top: 9px;
+	float: left;
+	padding-left: 21px;
+}
+#nav li a { color: #fff; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Wellfleet'; }
+#nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
+#nav li a:hover { color: #fff; opacity:1; }
+#slide1, #slide2{ width: 100%; }
+#slide1{
+	background:url('../img/slide1.jpg')  50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+#slide2{
+	background:url('../img/slide2.jpg') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-position: 30%;
+	background-size: cover;
+}
+#slide3{
+	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	height: 600px;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}
+#slide4{
+	background:url('../img/slide4.jpg') 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+	background-position: 30%;
+}
+#slide5{
+	background: url(../img/slide5.jpeg) 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}
+.text1{
+	padding-left: 30px;
+	font-size: large;
+	margin-top: 50px;
+	float: left;
+	width: 270px;
+	height: 270px;
+	opacity: 0.7;
+	background-color: whitesmoke;
+	color: black;
+}.text2{
+	padding-left: 30px;
+	font-size: large;
+	float: left;
+	width: 270px;
+	height: 270px;
+	opacity: 0.7;
+	background-color: whitesmoke;
+	color: black;
+}.text3{
+	 padding-left: 30px;
+	font-size: large;
+	margin-top: 100px;
+	float: left;
+	width: 270px;
+	height: 270px;
+	opacity: 0.7;
+	background-color: whitesmoke;
+	color: black;
+}.text4{
+	padding-left: 30px;
+	font-size: large;
+	float: right;
+	width: 270px;
+	height: 270px;
+	opacity: 0.7;
+	background-color: whitesmoke;
+	color: black;
+}

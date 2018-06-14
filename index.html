@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tennis</title>
+	<link media="print, handheld" rel="stylesheet" href="css/mobile.css">
+	<link media="print, tv" rel="stylesheet" href="css/pk.css">
+	<link media="screen" rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+	$(document).ready(function() {
+			var targetOffset=0;
+			var currentSlide=0;
+		$('a#link0').click(function() {
+			currentSlide=0
+			$("#nav ul li a").removeClass("active");
+			$(this).addClass('active');
+			targetOffset=0;
+			$('html, body').animate({scrollTop: targetOffset}, 1000);
+			return false;
+		});
+		$('a#link1').click(function() {
+			currentSlide=1
+			$("#nav ul li a").removeClass("active");
+			$(this).addClass('active');
+			targetOffset=1060*currentSlide;
+			$('html, body').animate({scrollTop: targetOffset}, 1000);
+			return false;
+		});
+		$('a#link2').click(function() {
+			currentSlide=2
+			$("#nav ul li a").removeClass("active");
+			$(this).addClass('active');
+			targetOffset=1060*currentSlide;
+			$('html, body').animate({scrollTop: targetOffset}, 1000);
+			return false;
+		});
+		$('a#link3').click(function() {
+			currentSlide=3
+			$("#nav ul li a").removeClass("active");
+			$(this).addClass('active');
+			targetOffset=1060*currentSlide;
+			$('html, body').animate({scrollTop: targetOffset}, 1000);
+			return false;
+		});
+		$('a#link4').click(function() {
+			currentSlide=4
+			$("#nav ul li a").removeClass("active");
+			$(this).addClass('active');
+			targetOffset=1060*currentSlide;
+			$('html, body').animate({scrollTop: targetOffset}, 1000);
+			return false;
+		});
+			$( "body" ).keydown(function(event) {
+				if (event.keyCode == 40){
+					targetOffset=targetOffset+1060;
+					$("#nav ul li a").removeClass("active");
+					currentSlide ++;
+					if(currentSlide>=5){
+						currentSlide=0;
+					}
+					selector="#link"+currentSlide;
+					$(selector).addClass('active');
+					if(targetOffset>=5300){
+						targetOffset=0;
+					}
+					$('html, body').animate({scrollTop: targetOffset}, 1000);
+					return false;
+				}
+				if (event.keyCode == 38){
+					targetOffset=targetOffset-1060;
+					currentSlide --;
+					$("#nav ul li a").removeClass("active");
+					if(currentSlide<0){
+						currentSlide=4;
+					}
+					selector="#link"+currentSlide;
+					$(selector).addClass('active');
+					if(targetOffset<0){
+						targetOffset=4240;
+					}
+					$('html, body').animate({scrollTop: targetOffset}, 1000);
+					return false;
+				}
+				return false;
+			});
+	});
+	</script>
+</head>
+<body>
+<header id="header">
+	<div class="content">
+		<div id="logo">Tennis wow</div>
+		<nav id="nav">
+			<ul>
+				<li><a id="link0" href="#slide1" class="active" title="Next Section" >Home</a></li>
+				<li><a id="link1" href="#slide2" title="Next Section">Australian Open</a></li>
+				<li><a id="link2" href="#slide3" title="Next Section">Roland Garrpos</a></li>
+				<li><a id="link3" href="#slide4" title="Next Section">Wimbledon</a></li>
+				<li><a id="link4" href="#slide5" title="Next Section">US Open</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="slide1">
+</div>
+<div id="slide2">
+	<div class="content" >
+		<div class="text1">
+			<p>Открытый чемпионат Австралии по теннису (англ. Australian Open Tennis Championships) — один из четырёх турниров Большого шлема, ныне проводящийся в австралийском городе Мельбурн на кортах местного спортивного комплекса «Мельбурн Парк».</p>
+		</div>
+	</div>
+</div>
+<div id="slide3">
+	<div class="content">
+		<div class="text2">
+			<p>Открытый чемпионат Франции по теннису (фр. Les Internationaux de France de Roland Garros; также известен как Ролан Гаррос) — один из четырёх турниров Большого шлема, ныне проводящийся в Париже (Франция) на кортах местного теннисного комплекса «Roland Garros». </p>
+		</div>
+	</div>
+</div>
+<div id="slide4">
+	<div class="content">
+		<div class="text3">
+			<p>Уимблдонский турнир (сокращённо Уимблдон, англ. The Championships, Wimbledon) — международный теннисный турнир, один из четырёх турниров Большого шлема, с 1877 года проводящий большинство своих матчей на травяных кортах Всеанглийского клуба лаун-тенниса и крокета (Уимблдон, Великобритания)</p>
+		</div>
+	</div>
+</div>
+<div id="slide5">
+	<div class="content">
+		<div class="text4">
+			<p>Открытый чемпионат США по теннису (англ. The United States Open Tennis Championships) — один из четырёх турниров Большого шлема, ныне проводящийся в американском городе Нью-Йорк на кортах местного Национального теннисного центра</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
